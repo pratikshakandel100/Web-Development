@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "/server">
+        <label for = "Email Address"> Email Address</label>
+    
+        <input type = "text" id = "Email Address" placeholder = "Enter your email" name = "email">
+        <br>
+        <label for = "Password">Password</label>
+        <input id = "Password" type = "password" placeholder="Enter your Password" name = "Password">
+        <br>
+        <button type = "submit">Login</button>
+        <!-- <input type = "text" placeholder="search in google" name = "q">
+        <button>search</button> -->
+        <input type = "checkbox" id = "age" name = "age"  >
+        <label for = "age">I am 18+</label>
+        <hr>
+        <div>
+            <input type = "radio" name = "fruit" id = "apple">
+            <label for = "apple"> apple</label>
+            <input type = "radio" name = "fruit" id = "Orange">
+            <label for = "Orange"> Orange</label>
+            <input type = "radio" name = "fruit" if = "mango">
+            <label for = "mango"> mango</label>
+        </div>
+        <br>
+        <div>
+            Choose your Profession
+            <select name = "profession" id = "profession">
+                <option value = "dev">Developer</option>
+                <option value = "Student">Student</option>
+
+            </select>
+        </div>
+        <div>
+            <label for = "Volume">Volume</label>
+            <input type = "Range" min = "0" max = 100 name = "Vol" step = "10" value = "70">
+        </div>
+        <br>
+        <label for = "feedback">Please Provide Feedback</label>
+        <textarea id = "feedback" rows="5" cols="10"></textarea>
+
+    </form>
+</body>
+</html>
