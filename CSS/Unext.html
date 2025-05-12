@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel = "stylesheet" href = "unext.css"> -->
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 50px auto;
+            transition-property: background-color, transform;
+            transition-duration: 2s, 4s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s, 2s;
+            border: 2px solid black;
+            
+
+        }
+        .box:hover{
+            background-color: honeydew;
+            transform: rotate(120deg) scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class = "box"></div>
+</body>
+</html>

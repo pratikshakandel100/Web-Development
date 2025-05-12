@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Transition Card Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <style>
+    body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: white;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px black;
+}
+
+  </style>
+    
+      
+
+  <h1>CSS Transition Card Gallery</h1>
+  <div class="card-container">
+    <div class="card">
+      <h2>Card One</h2>
+      <p>This is the first card with a hover effect.</p>
+    </div>
+    <div class="card">
+      <h2>Card Two</h2>
+      <p>This is the second card with a smooth transition.</p>
+    </div>
+    <div class="card">
+      <h2>Card Three</h2>
+      <p>This is the third card. Hover to see the magic!</p>
+    </div>
+  </div>
+</body>
+</html>

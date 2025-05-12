@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+
+  <style>
+
+    
+    .div1 {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      border: 2px solid black;
+      padding: 20px;
+      font-family: Arial;
+      background-color: silver;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .div2 {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .box {
+      width: 30%;
+      border: 1px solid #000;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    .gender {
+      margin-top: 5px;
+    }
+
+    .register-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 30px;
+      font-size: 16px;
+    }
+    #divbig{
+        
+    height: 100px;
+    width: 1200;
+    border: 2px solid purple;
+    margin: 5px;
+    margin-left: 5px;
+    background-color: cornflowerblue;
+}
+    
+  </style>
+</head>
+<body>
+
+  <div class="div1">
+    
+    <div id = "divbig"></div>
+    <form>
+      <div class="div2">
+        
+        
+        <div class="box">
+          <label>Username:</label>
+          <input type="text" placeholder="Username" />
+
+          <label>Full Name:</label>
+          <input type="text" placeholder="Full Name" />
+
+          <label>Email:</label>
+          <input type="email" placeholder="Email" />
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box">
+          <label>Date of Birth:</label>
+            <input type="date" />
+           
+          <label>Password:</label>
+          <input type="password" placeholder="Password" />
+
+          <label>Gender:</label>
+          <div class="gender">
+            <input type="radio" name="gender" value="male" /> Male
+            <input type="radio" name="gender" value="female" /> Female
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+          
+
+          <label>Description:</label>
+          <textarea placeholder="..................." rows="5"></textarea>
+          <button type="submit" class="register-btn">Register</button>
+        </div>
+
+      </div>
+
+      
+    </form>
+    <div id = "divbig"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* div{
+    height:200px;
+    width:200px;
+    background-color: fuchsia;
+    border:2px solid black;
+    margin: 3px;
+    display: inline-block;
+}
+#third {
+    display:none
+}
+h1{
+    border: 2px solid black;
+    width: 50%;
+}
+    */
+#outer{
+    height: 400px;
+    width: 400px;
+    background-color: chartreuse;
+    margin:50px;
+    font-size: 20px;
+    padding: 10px;
+
+} 
+#inner{
+    height: 100px;
+    width: 200px;
+    border: 3px solid black;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: indianred;
+    font-size: 0.5em;
+    padding: 1em;
+}

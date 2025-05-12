@@ -1,0 +1,13 @@
+
+.main{
+    border: 2px solid black;
+    height: 95vh;
+    width: 95vw;
+    margin: 2px;
+
+}
+.div1{
+    border: 2px solid black;
+    height: 85vh;
+    width: 85vh;
+}

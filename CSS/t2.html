@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Colored Rectangles (Flexbox)</title>
+<style>
+  .container {
+    width: 800px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: flex-start; /* Align items to the top */
+    padding-left: 20px; /* Add some left padding for the first rectangle */
+    position: relative; /* For positioning the last blue rectangle */
+  }
+
+  .rectangle {
+    width: 800px; /* Adjust as needed */
+    height: 200px;
+    background-color: white; /* To make the border visible */
+    border-width: 2px;
+    border-style: solid;
+    margin-right: 20px; /* Space between the rectangles */
+  }
+
+  .red {
+    border-color: darkred;
+    width: 50px;
+    height: 150px;
+    margin-top: 25px;
+  }
+
+  .gray {
+    border-color: lightgray;
+    width: 100px;
+    height: 70px;
+    margin-top: 65px;
+  }
+
+  .orange {
+    border-color: darkorange;
+    width: 120px;
+    height: 60px;
+    margin-top: 70px;
+  }
+
+  .blue {
+    border-color: darkblue;
+    width: 150px;
+    height: 80px;
+    margin-top: 60px;
+  }
+
+  .bottom-blue {
+    border-color: darkblue;
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-right: 0; /* Override default margin */
+    margin-top: auto; /* Push it to the bottom if container is taller */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="rectangle red"></div>
+  <div class="rectangle gray"></div>
+  <div class="rectangle orange"></div>
+  <div class="rectangle blue"></div>
+  <div class="rectangle bottom-blue"></div>
+</div>
+
+</body>
+</html>

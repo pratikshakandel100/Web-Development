@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.main-div {
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.div1 {
+    background-color: #333;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.child1, .child2, .child3, .child4 {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.child1:hover, .child2:hover, .child3:hover, .child4:hover {
+    color: #cccccc;
+}
+
+/* Welcome Section */
+.div2 {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.div2 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.div2 p {
+    font-size: 1.1rem;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Image Layout Section */
+.div3 {
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #faebd7;
+}
+
+.div4, .div5 {
+    background-color: #dddddd;
+    padding: 60px;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    border-radius: 4px;
+}
+
+.div6 {
+    background-color: #dddddd;
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* Footer */
+.div7 {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .div1 {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    
+    .child1, .child2, .child3, .child4 {
+        margin: 10px 0;
+    }
+    
+    .div3 {
+        flex-direction: column;
+    }
+    
+    .div4, .div5, .div6 {
+        min-width:100%;
+}
+
+@media screen and (max-width: 375px) {
+    .div1 {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    
+    .child1, .child2, .child3, .child4 {
+        margin: 10px 0;
+    }
+    
+    .div3 {
+        flex-direction: column;
+    }
+    
+    .div4, .div5, .div6 {
+        min-width:100%;
+}
+
+
+
+}
+
+}

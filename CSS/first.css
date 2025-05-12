@@ -1,6 +1,10 @@
 *{
     font-family: "Courier New";
-    
+   
+
+}
+h3{
+    background-color: blue !important;
 }
 h3{
     color:purple;
@@ -41,4 +45,39 @@ input[type = "password"]{
 }
 button:hover{
     background-color: pink;
+}
+h3:hover{
+    text-decoration: none;
+    text-decoration: overline;
+}
+button:active{
+     background-color:black;
+     color:palevioletred;
+
+}
+p:active{
+    font-weight: bold;
+    color: yellowgreen;
+}
+input[type = "radio"]:checked + label{
+    color:cornflowerblue;
+    font-weight: bold;
+}
+.div:nth-of-type(2){
+    background-color: hotpink;
+}
+h1::first-letter{
+    color:black;
+}
+p::first-line{
+    color: purple;
+}
+p::selection{
+    background-color: yellowgreen;
+}
+h3{
+    background-color: brown;
+}
+h3{
+    background-color: yellow;
 }
