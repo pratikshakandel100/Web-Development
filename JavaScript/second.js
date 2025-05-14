@@ -81,8 +81,6 @@ function Markss(marks){
 
 
 function Marksss(Eng, Math, Nepali, Sci, Computer){
-
-
     let totalSubMarks = 500;
     let totalMarks = Eng + Math + Nepali + Sci + Computer;
     let percentage =( (totalMarks / totalSubMarks)  * 100);
@@ -111,7 +109,7 @@ function Marksss(Eng, Math, Nepali, Sci, Computer){
         console.log("Fail")
     }
 }
-Marksss(90,50,40,80,80);
+Marksss(90,50,40,30,80);
 
 
 // 2 user
