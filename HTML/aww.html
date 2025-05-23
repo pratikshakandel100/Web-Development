@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Display and Remove</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Enter something..." required>
+  <button id="displayBtn">Display Text</button>
+
+  <div id="output"></div>
+  <div id="buttonContainer"></div>
+
+  <script>
+    document.getElementById("Button").addEventListener("click", function() {
+      const inputValue = document.getElementById("myInput").value;
+
+      // Display the input text
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerText = "You entered: " + inputValue;
+
+      // Clear previous remove button (optional: only one remove button at a time)
+      document.getElementById("buttonContainer").innerHTML = "";
+
+      // Create a "Remove Text" button
+      const removeBtn = document.createElement("button");
+      removeBtn.innerText = "Remove Text";
+
+      // Add functionality to remove the displayed text
+      removeBtn.addEventListener("click", function() {
+        outputDiv.innerText = "";
+        removeBtn.remove(); // Remove the button itself too
+      });
+
+      // Add the button to the page
+      document.getElementById("buttonContainer").appendChild(removeBtn);
+    });
+  </script>
+</body>
+</html>

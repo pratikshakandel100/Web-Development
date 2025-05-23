@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Change Classes with JavaScript</title>
+    <style>
+      #targetBox {
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background-color: lightgray;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+ 
+      .red {
+        background-color: red;
+        color: white;
+      }
+ 
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+ 
+      .rounded {
+        border-radius: 20px;
+      }
+ 
+      .shadow {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Class Manipulation Demo</h2>
+ 
+    <button onclick="addRed()">Add <code>.red</code></button>
+    <button onclick="removeRed()">Remove <code>.red</code></button>
+    <button onclick="toggleBlue()">Toggle <code>.blue</code></button>
+    <button onclick="toggleRounded()">Toggle <code>.rounded</code></button>
+    <button onclick="toggleShadow()">Toggle <code>.shadow</code></button>
+ 
+    <div id="targetBox">Target Box</div>
+    <div id="container">
+      <h1 id="title">DOM Traversal</h1>
+      <p class="description">This is a sample paragraph for DOM traversal.</p>
+      <ul id="itemList">
+        <li>Item 1</li>
+        <li class="highlight">Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <!-- <div id = "container"> -->
+        <button onclick="addPara()"></button>
+    <!-- </div> -->
+     <div>
+        
+     </div>
+
+ 
+    <script>
+      const box = document.getElementById("targetBox");
+ 
+      function addRed() {
+        box.classList.add("red");
+      }
+ 
+      function removeRed() {
+        box.classList.remove("red");
+      }
+ 
+      function toggleBlue() {
+        box.classList.toggle("blue");
+      }
+ 
+      function toggleRounded() {
+        box.classList.toggle("rounded");
+      }
+ 
+      function toggleShadow() {
+        box.classList.toggle("shadow");
+      }
+      const c = document.getElementById("container")
+      console.log(c.children)
+      const u = document.getElementById("itemList")
+      console.log(u.children)
+      console.log(u.childNodes)
+      const pp = document.getElementsByClassName("description")
+      console.log(document.getElementsByClassName("description").parentElement)
+      console.log(pp.parentElement)
+      const sib = document.getElementsByClassName("highlight")
+      console.log(sib.previousElementSibling)
+
+      function addPara() {
+        const newPara = document.createElement("p"); // create a <p> element
+        newPara.textContent = "New paragraph added to the DOM!";
+        container.appendChild(newPara); // append to the container
+      }
+    </script>
+  </body>
+</html>
+ 
+ 
