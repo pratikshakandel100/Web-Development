@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Switch Statement Example</title>
+  </head>
+  <body>
+    <h2>Day Checker</h2>
+    <label for="dayInput">Enter a day (e.g., Monday):</label>
+    <input type="text" id="dayInput" />
+    <button onclick="checkDay()">Check</button>
+ 
+    <p id="output"></p>
+ 
+    <h1 id=""></h1>
+ 
+    <script>
+      console.log(document);
+      console.log(document.getElementById("dayInput").value);
+ 
+      function checkDay() {
+        debugger;
+        const day = document
+          .getElementById("dayInput")
+          .value.trim()
+          .toLowerCase();
+        console.log(day);
+        // const day = "Sunday";
+        const output = document.getElementById("output");
+ 
+        switch (day) {
+          case "monday":
+            output.textContent = "Start of the work week!";
+            break;
+          case "friday":
+            output.textContent = "Almost weekend!";
+            break;
+          case "saturday":
+          case "sunday":
+            output.textContent = "It's the weekend!";
+            break;
+          case "tuesday":
+          case "wednesday":
+          case "thursday":
+            output.textContent = "Midweek day!";
+            break;
+          default:
+            output.textContent = "Please enter a valid day.";
+        }
+      }
+    </script>
+  </body>
+</html>
+ 
+ 
