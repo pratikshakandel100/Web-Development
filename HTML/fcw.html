@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="gpt.css" />
+</head>
+<body>
+  <form onsubmit="CheckPercentageAndGrade(event)">
+    <div class = "form">
+      Enter the marks in the given subject<br>
+     <div class = "f1">
+      Math: <input type="number"  pattern="\d*" id="Math" min="1" max="100"/><br>
+     </div>
+     <div class = "f2">
+      Science: <input type="number"  pattern="\d*" id="Science" min="1" max="100"/><br>
+      </div>
+      <div class = "f3">
+      Nepali: <input type="number"  pattern="\d*" id="Nepali" min="1" max="100"/><br>
+      </div>
+      <div class = "f4">
+      English: <input type="number"  pattern="\d*" id="English" min="1" max="100"/><br>
+      </div>
+      <div class = "f5">
+      Social: <input type="number"  pattern="\d*" id="Social" min="1" max="100"/><br>
+      </div>
+      <button type="submit">Click me</button>
+    </div>
+  </form>
+
+  <p id="output"></p>
+
+  <script>
+   function CheckPercentageAndGrade(event) {
+  event.preventDefault();
+
+  // Get the values from input fields
+  const Math = Number(document.getElementById("Math").value);
+  const Science = Number(document.getElementById("Science").value);
+  const Nepali = Number(document.getElementById("Nepali").value);
+  const English = Number(document.getElementById("English").value);
+  const Social = Number(document.getElementById("Social").value);
+
+  const inputs = [Math, Science, Nepali, English, Social];
+  const allValid = inputs.every(mark => mark >= 0 && mark <= 100);
+
+  if (!allValid) {
+    document.getElementById("output").innerHTML = "❌ Please enter marks between 0 and 100.";
+    return;
+  }
+
+  const total = Math + Science + Nepali + English + Social;
+  const percentage = total / 5;
+
+  let grade = "";
+  switch (true) {
+    case (percentage >= 90):
+      grade = "A+";
+      break;
+    case (percentage >= 80):
+      grade = "A";
+      break;
+    case (percentage >= 70):
+      grade = "B+";
+      break;
+    case (percentage >= 60):
+      grade = "B";
+      break;
+    case (percentage >= 50):
+      grade = "C+";
+      break;
+    case (percentage >= 40):
+      grade = "C";
+      break;
+    case (percentage >= 30):
+      grade = "D";
+      break;
+    default:
+      grade = "F (Fail)";
+  }
+
+  const output = `
+    ma = ${Math}, sc = ${Science}, so = ${Social}, en = ${English}, ne = ${Nepali}<br><br>
+    Total Marks = ${total}<br>
+    Percentage = ${percentage.toFixed(2)}%<br>
+    Grade = ${grade}
+  `;
+
+  document.getElementById("output").innerHTML = output;
+
+
+   }
+
+  </script>
+</body>
+</html>

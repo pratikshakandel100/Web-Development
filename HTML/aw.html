@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paper Submission Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output-container {
+      width: 400px;
+      padding: 20px;
+      margin-left: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Paper Submission Form</h2>
+    <form id="paperForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" required />
+
+      <label for="date">Date</label>
+      <input type="date" id="date" required />
+
+      <label for="email">Student Email</label>
+      <input type="email" id="email" required />
+
+      <label for="studentId">Student ID</label>
+      <input type="text" id="studentId" required />
+
+      <label for="title">Paper Title</label>
+      <input type="text" id="title" required />
+
+      <label for="description">Description</label>
+      <textarea id="description" rows="3" required></textarea>
+
+      <label for="file">Upload File</label>
+      <input type="file" id="file" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="output-container" id="outputContainer">
+    <h3>Submitted Data</h3>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    document.getElementById('paperForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const date = document.getElementById('date').value;
+      const email = document.getElementById('email').value;
+      const studentId = document.getElementById('studentId').value;
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const fileInput = document.getElementById('file');
+      const file = fileInput.files[0] ? fileInput.files[0].name : 'No file selected';
+
+      const output = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Student ID:</strong> ${studentId}</p>
+        <p><strong>Title:</strong> ${title}</p>
+        <p><strong>Description:</strong> ${description}</p>
+        <p><strong>File:</strong> ${file}</p>
+      `;
+
+      document.getElementById('output').innerHTML = output;
+    });
+  </script>
+
+</body>
+</html>
